@@ -101,7 +101,17 @@
           </div>
           <button class="btn btn-outline btn-sm btn-block" id="adminLogout" style="border-color:rgba(251,247,241,.4); color:var(--cream);">↪ Keluar</button>
         </aside>
-        <main class="admin-main" id="mainContent"></main>
+        <div class="admin-main">
+          <div class="admin-topbar">
+            <button class="topbar-menu-btn">☰</button>
+            <div class="topbar-search"><input type="text" placeholder="Cari produk, pesanan, pengguna..."></div>
+            <div class="topbar-actions">
+              <button class="topbar-icon-btn">🔔<span class="topbar-dot"></span></button>
+              <div class="avatar avatar-sm topbar-avatar">${initials(admin.name)}</div>
+            </div>
+          </div>
+          <div class="main-scroll" id="mainContent"></div>
+        </div>
       </div>`;
     document.querySelectorAll('.admin-nav button').forEach(b => {
       b.addEventListener('click', () => { currentPage = b.dataset.page; renderMain(); });
