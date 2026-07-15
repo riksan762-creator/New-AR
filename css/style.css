@@ -323,3 +323,107 @@ td{ padding:12px; border-bottom:1px solid rgba(43,26,34,.07); vertical-align:mid
 .login-card{ background:var(--cream); border-radius:20px; padding:40px 36px; width:100%; max-width:400px; box-shadow: var(--shadow-lg); }
 .empty-state{ text-align:center; padding:50px 20px; color:#8a7a83; }
 .empty-state .em-icon{ font-size:40px; margin-bottom:12px; }
+
+/* ---------- Admin: refined sidebar ---------- */
+.admin-sidebar{ gap:0; }
+.sidebar-logo-row{ display:flex; align-items:center; gap:10px; margin-bottom:2px; }
+.sidebar-logo-mark{
+  width:38px; height:38px; border-radius:10px; background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:700;
+  color:var(--ink); font-size:16px; flex-shrink:0;
+}
+.nav-section-label{ font-size:10.5px; letter-spacing:1.6px; text-transform:uppercase; color:rgba(251,247,241,.4); font-weight:700; margin:22px 6px 8px; }
+.admin-nav button{ position:relative; }
+.admin-nav button .nav-ic{ font-size:16px; width:20px; text-align:center; flex-shrink:0; }
+.admin-nav button.active::before{
+  content:''; position:absolute; left:-18px; top:50%; transform:translateY(-50%); width:4px; height:22px;
+  background:var(--gold); border-radius:0 4px 4px 0;
+}
+@media (max-width:900px){ .admin-nav button.active::before{ display:none; } }
+.sidebar-user-card{
+  display:flex; align-items:center; gap:10px; padding:10px; border-radius:12px; background: rgba(255,255,255,.05); margin-bottom:12px;
+}
+.avatar{
+  width:36px; height:36px; border-radius:50%; background: var(--gold); color:var(--ink); font-weight:700;
+  display:flex; align-items:center; justify-content:center; font-size:14px; flex-shrink:0; font-family: var(--font-display);
+}
+.avatar-sm{ width:28px; height:28px; font-size:11.5px; }
+
+/* ---------- Admin: page topbar with search/filter ---------- */
+.page-topbar{ margin-bottom:26px; }
+.page-topbar-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; margin-bottom:18px; }
+.page-topbar h2{ font-size:26px; margin-bottom:4px; }
+.page-subtitle{ font-size:13.5px; color:#8a7a83; }
+.toolbar-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.search-box{
+  position:relative; flex:1; min-width:200px; max-width:340px;
+}
+.search-box input{
+  width:100%; padding:10px 14px 10px 36px; border-radius:10px; border:1.5px solid rgba(43,26,34,.15);
+  font-size:13.5px; background:var(--cream); font-family:inherit;
+}
+.search-box::before{
+  content:'🔍'; position:absolute; left:12px; top:50%; transform:translateY(-50%); font-size:12.5px; opacity:.6;
+}
+.filter-select{
+  padding:10px 14px; border-radius:10px; border:1.5px solid rgba(43,26,34,.15); font-size:13.5px;
+  background:var(--cream); font-family:inherit; font-weight:600; color:var(--ink);
+}
+
+/* ---------- Admin: stat cards v2 ---------- */
+.stat-card{ display:flex; flex-direction:column; gap:10px; position:relative; overflow:hidden; }
+.stat-card-top{ display:flex; align-items:center; justify-content:space-between; }
+.stat-icon{
+  width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:17px;
+}
+.stat-icon.ic-plum{ background: rgba(74,35,56,.1); }
+.stat-icon.ic-gold{ background: rgba(185,139,78,.15); }
+.stat-icon.ic-rose{ background: rgba(201,139,147,.18); }
+.stat-icon.ic-success{ background: rgba(74,120,86,.12); }
+.stat-trend{ font-size:11.5px; font-weight:700; color:var(--success); }
+.stat-trend.down{ color:var(--danger); }
+
+/* ---------- Ellipsis dropdown menu ---------- */
+.dropdown{ position:relative; display:inline-block; }
+.ellipsis-btn{
+  background:transparent; border:none; font-size:18px; padding:5px 9px; border-radius:8px; color:var(--ink);
+  line-height:1; letter-spacing:1px;
+}
+.ellipsis-btn:hover{ background: rgba(43,26,34,.08); }
+.dropdown-menu{
+  position:absolute; right:0; top:calc(100% + 4px); background:var(--white); border-radius:12px; box-shadow: var(--shadow-lg);
+  min-width:180px; z-index:60; padding:6px; border:1px solid rgba(43,26,34,.08); display:none;
+}
+.dropdown-menu.open{ display:block; }
+.dropdown-item{
+  width:100%; text-align:left; background:transparent; border:none; padding:9px 12px; border-radius:8px; font-size:13.5px;
+  display:flex; align-items:center; gap:9px; color:var(--ink); font-weight:500;
+}
+.dropdown-item:hover{ background: rgba(43,26,34,.06); }
+.dropdown-item.danger{ color:var(--danger); }
+.dropdown-item.danger:hover{ background: rgba(168,67,58,.08); }
+.dropdown-divider{ height:1px; background: rgba(43,26,34,.08); margin:5px 4px; }
+
+/* ---------- Table polish ---------- */
+table tr:hover td{ background: rgba(74,35,56,.025); }
+.cell-name{ font-weight:600; }
+.cell-sub{ font-size:11.5px; color:#8a7a83; margin-top:2px; }
+th:last-child, td:last-child{ text-align:right; }
+
+/* ---------- Order detail modal ---------- */
+.od-head-row{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:18px; flex-wrap:wrap; gap:10px; }
+.od-item-row{ display:flex; gap:12px; padding:10px 0; border-bottom:1px solid rgba(43,26,34,.07); align-items:center; }
+.od-item-row img{ width:50px; height:62px; object-fit:cover; border-radius:8px; }
+.od-info-grid{ display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:20px; }
+@media (max-width:600px){ .od-info-grid{ grid-template-columns:1fr; } }
+.od-block-label{ font-size:11px; text-transform:uppercase; letter-spacing:1px; color:var(--rose); font-weight:700; margin-bottom:6px; }
+.timeline{ display:flex; gap:0; margin:20px 0; }
+.timeline-step{ flex:1; text-align:center; position:relative; }
+.timeline-step .dot{ width:14px; height:14px; border-radius:50%; background:var(--sand-deep); margin:0 auto 6px; }
+.timeline-step.done .dot{ background: var(--plum); }
+.timeline-step .lbl{ font-size:11px; color:#8a7a83; }
+.timeline-step::after{
+  content:''; position:absolute; top:6px; left:50%; width:100%; height:2px; background:var(--sand-deep); z-index:-1;
+}
+.timeline-step:last-child::after{ display:none; }
+.timeline-step.done::after{ background:var(--plum); }
