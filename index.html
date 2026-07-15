@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AR Fashion — Hijab & Modest Wear Indonesia</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="#home" class="brand">
+      <span class="brand-mark">AR</span>
+      <span class="brand-sub">Fashion</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#katalog">Katalog</a>
+      <a href="#unggulan">Unggulan</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="accountBtn" title="Akun">👤</button>
+      <button class="icon-btn" id="cartBtn" title="Keranjang">🛍️<span class="badge-count" id="cartCount">0</span></button>
+      <button class="icon-btn mobile-toggle" id="mobileToggle">☰</button>
+    </div>
+  </div>
+  <nav class="nav-links" id="mobileNav" style="display:none; flex-direction:column; padding:12px 28px 18px; gap:14px;">
+    <a href="#katalog">Katalog</a>
+    <a href="#unggulan">Unggulan</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div>
+      <div class="eyebrow">Koleksi Modest Wear 2026</div>
+      <h1>Anggun dalam<br><em>setiap lipatan</em></h1>
+      <p>AR Fashion menghadirkan hijab dan busana muslim berkualitas premium dengan bahan pilihan, jahitan rapi, dan harga bersahabat untuk perempuan Indonesia.</p>
+      <div class="hero-cta">
+        <a href="#katalog" class="btn btn-gold">Belanja Sekarang</a>
+        <a href="#unggulan" class="btn btn-outline" style="border-color:rgba(251,247,241,.5); color:var(--cream);">Lihat Unggulan</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>2.500+</b><span>Pelanggan Puas</span></div>
+        <div class="hero-stat"><b>50+</b><span>Model Hijab</span></div>
+        <div class="hero-stat"><b>4.8/5</b><span>Rating Toko</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="drape-card">
+        <img src="https://placehold.co/600x760/B98B4E/2B1A22?text=Koleksi+Terbaru&font=raleway" alt="Koleksi terbaru hijab AR Fashion">
+        <div class="drape-tag">
+          <div style="font-size:12px; opacity:.85;">Pashmina Silk Satin</div>
+          <div class="price">Rp 110.000</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="the-fold fold-plum-to-sand">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 C300,60 900,0 1200,40 L1200,60 L0,60 Z"></path></svg>
+  </div>
+</section>
+
+<!-- ============ FEATURED ============ -->
+<section class="section" id="unggulan">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Paling Diminati</h2>
+        <p>Pilihan favorit pelanggan minggu ini, stok terbatas.</p>
+      </div>
+    </div>
+    <div class="product-grid" id="featuredGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CATALOG ============ -->
+<section class="section" id="katalog" style="background:var(--cream); padding-top:70px;">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h2>Katalog Lengkap</h2>
+        <p>Temukan hijab, bergo, dan aksesoris sesuai gaya kamu.</p>
+      </div>
+    </div>
+    <div class="chip-row" id="chipRow"></div>
+    <div class="product-grid" id="catalogGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="tentang">
+  <div class="container" style="max-width:760px; text-align:center;">
+    <div class="eyebrow" style="color:var(--gold);">Tentang Kami</div>
+    <h2 style="margin-bottom:16px;">Dibuat dengan Cinta untuk Muslimah Indonesia</h2>
+    <p style="color:#6b5560; line-height:1.7; font-size:16px;">AR Fashion lahir dari keinginan menghadirkan hijab berkualitas dengan harga yang masuk akal. Setiap produk dipilih langsung dari pengrajin terpercaya, dengan kontrol kualitas ketat sebelum sampai ke tangan kamu.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="kontak">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="admin-brand" style="margin-bottom:10px;">AR <span>Fashion</span></div>
+        <p style="font-size:13.5px; opacity:.7; line-height:1.6; max-width:260px;">Hijab &amp; busana muslim premium untuk gaya hidup modest masa kini.</p>
+      </div>
+      <div>
+        <h4>Belanja</h4>
+        <a href="#katalog">Semua Produk</a>
+        <a href="#unggulan">Unggulan</a>
+        <a href="#" id="footerAccountLink">Akun Saya</a>
+      </div>
+      <div>
+        <h4>Bantuan</h4>
+        <a href="#">Cara Pemesanan</a>
+        <a href="#">Kebijakan Pengembalian</a>
+        <a href="#">Hubungi Kami</a>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <a href="#">WhatsApp: 0812-3456-7890</a>
+        <a href="#">hello@arfashion.id</a>
+        <a href="#">Bandung, Indonesia</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 AR Fashion. Semua hak dilindungi.</div>
+  </div>
+</footer>
+
+<!-- ============ PRODUCT DETAIL MODAL ============ -->
+<div class="overlay" id="productOverlay">
+  <div class="modal" id="productModal"></div>
+</div>
+
+<!-- ============ ACCOUNT / AUTH MODAL ============ -->
+<div class="overlay" id="authOverlay">
+  <div class="modal modal-sm" id="authModal"></div>
+</div>
+
+<!-- ============ CHECKOUT MODAL ============ -->
+<div class="overlay" id="checkoutOverlay">
+  <div class="modal" id="checkoutModal"></div>
+</div>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="drawer-overlay" id="cartOverlay">
+  <aside class="cart-drawer">
+    <div class="cart-head">
+      <h3 style="font-size:19px;">Keranjang Belanja</h3>
+      <button class="modal-close" id="closeCart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItemsWrap"></div>
+    <div class="cart-foot">
+      <div class="cart-total-row"><span>Subtotal</span><span class="mono" id="cartSubtotal">Rp 0</span></div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn">Lanjut ke Checkout</button>
+    </div>
+  </aside>
+</div>
+
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script src="js/data.js"></script>
+<script src="js/store.js"></script>
+</body>
+</html>
